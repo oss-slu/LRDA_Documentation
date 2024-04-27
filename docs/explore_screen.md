@@ -3,7 +3,7 @@
 # Video
 
 <video width="320" height="240" controls>
-  <source src="/videos/ExploreScreenVideo_1.mp4" type="video/mp4" />
+  <source src="/videos/ExploreScreenVideo.mp4" type="video/mp4" />
 </video>
 
 # Introduction
