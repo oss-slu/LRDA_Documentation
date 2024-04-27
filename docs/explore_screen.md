@@ -2,7 +2,9 @@
 
 # Video
 
-
+<video width="320" height="240" controls>
+  <source src="/videos/ExploreScreenVideo_1.mp4" type="video/mp4" />
+</video>
 
 # Introduction
 
@@ -10,14 +12,56 @@ The Explore Screen of Where's Religion is centered around the Map feature that c
 
 # Components
 
+The Components of the Explore Screen are:
 
+1. Search bar
+2. Map View
+3. Side Scrolling Card View
 
 # Packages
 
-
+The Packages used in this screen are:
+1. Ionicons
+2. MaterialCommunityIcons
+3. formatToLocalDateString
+4. MapView
 
 # Implementation
 
+The screen was implemented with many different moving parts. Below is a summary of all of them:
 
+1. Imports and Setup:
+The component imports various React and React Native modules, including hooks and components like View, Text, and Image.
+It also imports third-party libraries such as react-native-maps for displaying maps and icons from react-native-vector-icons.
+
+2. State Management:
+Uses useState and useRef for local state management and references.
+Manages state for modal visibility, selected notes, search queries, map types, and search results.
+
+3. Map and Location Handling:
+Utilizes the MapView component from react-native-maps to render a map that users can interact with.
+Fetches and handles the user's location using expo-location.
+Dynamically changes the map's region based on user interaction and search results.
+
+4. Search Functionality:
+Includes a search input to query notes/messages. The search results affect the map's displayed region.
+Handles search through a custom ApiService that likely communicates with a backend server.
+
+5. Styling and Layout:
+Uses StyleSheet to define various styles for UI components.
+Layout includes a search box, chips for categorization, and a scrollable card view to display individual items or notes.
+
+6. Note Interaction:
+Allows users to view details of a note or marker via a modal (NoteDetailModal).
+Each marker on the map is interactive and can show detailed information when tapped.
+
+7. Dark Mode and Theme Support:
+Incorporates theme support with dark mode through useTheme to adjust the visual elements based on the theme settings.
+
+8. Map Type Toggling:
+Provides functionality to switch between different map types (e.g., standard, satellite) via UI controls.
 
 # Known Bugs
+
+1. Pressing a pin does not go to the right note
+2. There are notes that are not showing up properly
