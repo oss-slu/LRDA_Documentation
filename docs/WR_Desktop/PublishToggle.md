@@ -1,4 +1,4 @@
-## `PublishToggle` Component
+## `PublishToggle` 
 
 ### Overview
 `PublishToggle` is a React component used to toggle the publication status of a content piece, such as a note. It provides visual feedback and executes a callback when the publication status is changed.

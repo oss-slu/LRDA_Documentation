@@ -1,4 +1,4 @@
-# `TimePicker` Component Documentation
+# `TimePicker` 
 
 ## Overview
 

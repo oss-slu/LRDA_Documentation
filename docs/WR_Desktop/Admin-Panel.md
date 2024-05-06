@@ -5,7 +5,7 @@ authors: izakrobles
 tags: [admin, documentation, schema]
 ---
 
-This is the documentation for the Admin Panle for the lived religion desktop.
+This is the documentation for the Admin Panel for the lived religion desktop.
 
 The Admin panel was initially developed in order to make changes to the backend on using the frontend. Note any of the changes made here will be reflected on the production database and cannot be reverted.
 

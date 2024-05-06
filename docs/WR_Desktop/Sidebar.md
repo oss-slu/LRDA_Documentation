@@ -1,4 +1,4 @@
-# `Sidebar` Component Documentation
+# `Sidebar`  
 
 ## Overview
 

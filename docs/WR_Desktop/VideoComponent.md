@@ -1,4 +1,4 @@
-# `VideoComponent` Documentation
+# `VideoComponent` 
 
 ## Overview
 

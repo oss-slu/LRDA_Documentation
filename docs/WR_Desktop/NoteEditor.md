@@ -1,12 +1,12 @@
 
 
-## Documentation for the `NoteEditor` Component
+## Documentation for the `NoteEditor` 
 
 ### Overview
 
 The `NoteEditor` component is a comprehensive React component designed to facilitate the creation and editing of note entries. It integrates various sub-components and utilities such as rich text editing, tag management, location picking, and multimedia management, among others. The component makes extensive use of hooks, context, and external utilities to manage state and handle user interactions.
 
-![Locked](..\assets\CreateANote\Create A Note UI.png)
+![Locked](/CreateANote/Create A Note UI.png)
 
 ### Navigation
 

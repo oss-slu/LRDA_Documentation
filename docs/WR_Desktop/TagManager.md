@@ -1,4 +1,4 @@
-# `TagManager` Component Documentation
+# `TagManager` 
 
 ## Overview
 

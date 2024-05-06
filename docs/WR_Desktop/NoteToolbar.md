@@ -1,4 +1,4 @@
-# `NoteToolbar` Component Documentation
+# `NoteToolbar` 
 
 ## Overview
 
