@@ -4,7 +4,7 @@
 
 ## Video
 
-<video width="200" height="150" controls>
+<video width="320" height="240" controls>
     <source src="/ProfileScreenVideo.mp4" type="video/mp4" />
 </video>
 
@@ -23,11 +23,15 @@ The components of the page are:
 
 ## Packages
 
+Packages used in this page are:
 1. API Calls
 
 ## Implementation
 
-The screen uses the API call, fetchMessages, to receive all of the notes that the user has created. This is done in order to fix the count how many notes the user has created and also to fetch all of the images that the user has used in notes.
+Here are how the components were implemented:
+1. FetchNotesComponent: This component is responsible for making the API call using fetchMessages to retrieve all the notes created by the user.
+2. NotesCountComponent: This component takes the notes data retrieved by the FetchNotesComponent and calculates the total number of notes created by the user.
+3. ImagesFetchComponent: This component processes the notes data to extract and fetch all images used in the notes.
 
 ## Known bugs
 
