@@ -22,6 +22,22 @@ The `Navbar` component serves as the navigation bar for a web application, provi
 - **User Authentication Initialization:**
   - On component mount, the effect hook fetches the user's name from the user model and attempts automatic login using stored credentials in `localStorage`. It also sets the username in the state if fetched successfully.
 
+  ### Event Handlers
+
+- **`handleLogout` Function**:
+  - **Purpose**: Handles user logout actions.
+  - **Process**:
+    - Attempts to log out using the `User` class method.
+    - Clears user-specific data from `localStorage`.
+    - Redirects to the homepage using `window.location.href`.
+  - **Error Handling**: Logs errors to the console if the logout process fails.
+
+- **`startTour` Function**:
+  - **Trigger**: Activated by a button click, this function determines the current page and launches an appropriate guided tour.
+  - **Details**:
+    - Checks the current route and starts a tour tailored to the page features.
+    - Utilizes `intro.js` for managing interactive steps and tour flow.
+
 ### Core Functionalities and Interactions
 
 - **Login and Logout:**
@@ -33,10 +49,24 @@ The `Navbar` component serves as the navigation bar for a web application, provi
     - Shows a "Create a Note" link if a user is logged in.
     - Always shows an "Explore" link.
 
+### Interactive Tour Integration
+
+- **Purpose**: Enhances user onboarding by providing guided tours of the application's interface.
+- **Implementation**:
+  - Utilizes `intro.js` for creating step-by-step interactive tours.
+  - Configured to trigger tours based on user actions or page visits.
+- **Customization**:
+  - Developers can customize the steps, look and feel, and flow of the tour.
+  - Tours are defined per page or feature to ensure relevance.
+- **Usage**:
+  - Example code to start a tour:
+    ```javascript
+    startTour(); // Initiates the tour, which can be customized per page
+    ```
+- **Accessibility**: Includes options to ensure the tour is accessible, including keyboard navigation and screen reader support.
+
 ### CSS and Styling
 
 - The component is styled with Tailwind CSS to provide a responsive and modern navigation bar, using classes for background color, text color, hover effects, and layout.
 
-### Conclusion
 
-The `Navbar` component is crucial for user navigation and authentication within the application. It dynamically adjusts its display based on the user's authentication status, offering a user-friendly interface for accessing various parts of the application.
