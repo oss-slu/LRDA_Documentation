@@ -35,3 +35,16 @@
 - **Adding a Note**: Users can add a new note via a button that initializes a note with default values and indicates that a new note is being added.
 - **Searching Notes**: A search bar allows for real-time filtering of notes based on titles or tags.
 - **Note Selection**: Displays a list of notes, and selecting a note triggers the `onNoteSelect` callback.
+
+### Interconnectivity
+
+- **Linked with**:
+  - `SearchBarNote`: Receives search input to filter notes displayed in `NoteListView`.
+  - `NoteListView`: Displays filtered or all notes based on the search criteria set via `SearchBarNote`.
+  - `Button` (Add Note): Triggers a callback that may affect `NoteEditor` or a similar component by initializing a new note creation process.
+
+- **Data Flow**:
+  - Receives the `onNoteSelect` callback from the parent page (likely `Create a Note`), which is used to signal selected notes to other components like the `NoteEditor`.
+
+- **Event Handling**:
+  - Interacts with `NoteListView` by providing it the list of filtered or all notes, where selecting a note triggers the `onNoteSelect` callback, affecting the entire note editing environment.

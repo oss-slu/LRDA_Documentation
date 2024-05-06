@@ -33,3 +33,15 @@
 ## User Interaction
 
 - **Viewing Videos**: Utilizes a `Dialog` component to display the current list of videos or a message if no videos are present.
+
+### Interconnectivity
+
+- **Linked with**:
+  - `NoteEditor`: Provides video content that is part of the note being edited.
+
+- **Data Flow**:
+  - Sends video details (URL, thumbnail, duration) back to `NoteEditor` after successful upload and processing, integrating it into the current note's content.
+
+- **Event Handling**:
+  - Updates in `VideoComponent` trigger updates in `NoteEditor`, ensuring that all multimedia content is up-to-date in the note preview and save functionality.
+

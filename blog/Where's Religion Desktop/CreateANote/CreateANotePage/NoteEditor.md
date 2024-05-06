@@ -1,9 +1,4 @@
----
-slug: Note component
-title: Note component
-authors: Josh-Hogan-87
-tags: [admin, documentation, schema]
----
+
 
 ## Documentation for the `NoteEditor` Component
 
@@ -76,6 +71,20 @@ Navigate to the Create A Note page by clicking on the Create A Note button on th
 
 - **Event Handlers:**
   - The component includes multiple handlers such as `handleTitleChange`, `handleDeleteNote`, etc., to manage user interactions and propagate changes to the state.
+
+  ### Interconnectivity
+
+- **Linked with**:
+  - `TagManager`: Manages tags for the current note being edited.
+  - `TimePicker`: Selects the time for the note.
+  - `VideoComponent`: Manages video attachments for the note.
+
+- **Data Flow**:
+  - Exchanges note data like tags, time, and video information with `TagManager`, `TimePicker`, and `VideoComponent` respectively, demonstrating a bidirectional flow where changes in these components update the note's content.
+
+- **Event Handling**:
+  - Updates from `TagManager`, `TimePicker`, and `VideoComponent` directly influence the note's content state in `NoteEditor`, ensuring all changes are synchronized and stored correctly.
+
 
 ### CSS and Styling
 
