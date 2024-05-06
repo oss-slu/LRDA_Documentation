@@ -1,4 +1,7 @@
 
+This is the documentation for the login screen for the lived religion desktop.
+
+
 ## Properties of Login Feature
 
 - The login feature is simply a layering of shadc/ui componenets.
