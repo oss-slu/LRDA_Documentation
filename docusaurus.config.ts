@@ -65,9 +65,8 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/oss-slu/LRDA_Documentation',
           label: 'GitHub',
           position: 'right',
         },
