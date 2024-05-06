@@ -1,0 +1,38 @@
+
+
+# Profile Screen Documentation
+
+## Video
+
+<video width="320" height="240" controls>
+    <source src="/ProfileScreenVideo.mp4" type="video/mp4" />
+</video>
+
+## Introduction
+
+The Profile Screen shows the user some important information. This includes the date that the user registered and images that the user has used in past notes. Users can access this screen from the homepage and pressing on the Profile Screen Button on the top left of the page.
+
+## Components
+
+The components of the page are:
+
+1. Profile Picture
+2. Info Container
+3. Stat Container
+4. Pictures Container
+
+## Packages
+
+Packages used in this page are:
+1. API Calls
+
+## Implementation
+
+Here are how the components were implemented:
+1. FetchNotesComponent: This component is responsible for making the API call using fetchMessages to retrieve all the notes created by the user.
+2. NotesCountComponent: This component takes the notes data retrieved by the FetchNotesComponent and calculates the total number of notes created by the user.
+3. ImagesFetchComponent: This component processes the notes data to extract and fetch all images used in the notes.
+
+## Known bugs
+
+Currently, this page does not have any known bugs.
