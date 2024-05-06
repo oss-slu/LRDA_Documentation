@@ -1,10 +1,21 @@
-### Starting Create A Note Screen Documentation
+---
+slug: Note component
+title: Note component
+authors: Josh-Hogan-87
+tags: [admin, documentation, schema]
+---
 
 ## Documentation for the `NoteEditor` Component
 
 ### Overview
 
 The `NoteEditor` component is a comprehensive React component designed to facilitate the creation and editing of note entries. It integrates various sub-components and utilities such as rich text editing, tag management, location picking, and multimedia management, among others. The component makes extensive use of hooks, context, and external utilities to manage state and handle user interactions.
+
+![Locked](..\assets\CreateANote\Create A Note UI.png)
+
+### Navigation
+
+Navigate to the Create A Note page by clicking on the Create A Note button on the Navbar or: http://localhost:3000/lib/pages/notes
 
 ### Dependencies
 
@@ -70,6 +81,3 @@ The `NoteEditor` component is a comprehensive React component designed to facili
 
 - The component uses Tailwind CSS for styling, ensuring responsiveness and a consistent design language.
 
-### Conclusion
-
-The `NoteEditor` component is a robust tool designed for handling complex note-taking activities within an application. It encapsulates functionality for text editing, media management, and other note-related features, making it an essential component for any application dealing with rich content creation and editing.
