@@ -1,0 +1,53 @@
+
+
+
+# Edit Note Screen 
+
+
+## Video
+
+<video width="320" height="240" controls>
+    <source src="/NoteScreenVideo.mp4" type="video/mp4" />
+</video>
+
+## Introduction
+
+The edit note screen is where users are taken when selecting a note from the home page. The edit note screen includes all the necessary features for a user to create and publish a note. Features include: A pell rich text editor to create and store the body of their note, photo and video addition to the note, automatic time and date grabbing on note save, audio recording, location hiding and sharing, tags which can be added to the note, and unlike the edit note screen it allows for untitled note saving.
+
+## Components
+
+The components of the page are:
+
+1. Photo Scroller
+2. Audio Container
+3. Tag Window
+4. Location Window
+5. Time Window
+6. Theme Provider
+7. Loading Modal
+
+## Packages
+
+Packages used in this page are:
+1. Location
+2. Toast Messages
+3. Ionicons
+4. API Calls
+5. Pell Rich Editor
+6. Thumbnails
+
+## Implementation
+
+Here are how the components were implemented:
+1. PhotoScrollerComponent: This component is responsible for the photo scroller at the top of the page, allowing users to see photos attached to the note and scroll through. The component also handles image insertion via a pass through with the rich text editor. Videos are also handled in this component.
+2. AudioContainerComponent: This component is responsible for the audio options indicated by the microphone ionicon at the top of the page. This component allows the user to record, play back, and attach audio to their note.
+3. TagWindowComponent: This component handles the user adding tags to their note for search up later and organizing. It is indicated with the tag ionicon at the top.
+4. LocationWindowComponent: This components logic is used for location hiding and showing when the note is published or unpublished. Note location is grabbed by defult, but can be hid by tapping the related location ionicon at the top, refer to onSave method as well.
+5. TimeWindowComponent: This component is responsible for allowing the user to store select and store a time with their note. Time is also grabbed by defult on note save.
+6. LoadingModalComponent: This component is responsible for displayed loading message when the note is saving, preventing the user from interacting with the note while it is saving.
+Misc.
+1. Note saving is then forwarded to the S3 proxy, see for more information.
+
+## Known bugs
+
+Currently, this page has known bugs on the android side with the scroller. Videos duration saves as 0:0, refer to S3.

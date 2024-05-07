@@ -5,7 +5,8 @@ authors: izakrobles
 tags: [admin, documentation, schema]
 ---
 
-This is the documentation for the Admin Panle for the lived religion desktop.
+
+This is the documentation for the Admin Panel for the lived religion desktop.
 
 The Admin panel was initially developed in order to make changes to the backend on using the frontend. Note any of the changes made here will be reflected on the production database and cannot be reverted.
 
@@ -26,7 +27,7 @@ The Admin panel was initially developed in order to make changes to the backend 
 Now that you have read everything above. You are ready to use this feature. The panel can be found by adding the following to the searchbar:
 `/lib/pages/adminPanel`
 Upon doing so you will be greeted with the following graphic.
-![Locked](../assets/adminPanel/AdminPanelLocked.png)
+![Locked](/adminPanel/AdminPanelLocked.png)
 If running off of localhost you can customize the password according to your liking by going into your `.env.local` and adding the following line
 `NEXT_PUBLIC_ADMIN_PASKEY=passwordHere`
 customizing passwordHere to your liking. The password used in the public build can be accessed through the project admin.
@@ -34,26 +35,26 @@ customizing passwordHere to your liking. The password used in the public build c
 ## Entry Schema Modification
 
 Once you have configured your password and entered it in you will be greeted with the following screen:
-![Unlocked](../assets/adminPanel/AdminPanelUnlocked.png)
+![Unlocked](/adminPanel/AdminPanelUnlocked.png)
 Now that we are in let's get into the **first** main function!
 Below you can see that I am choosing to add the variable `globalTest` with the type parameter set to `boolean`. You are welcome to run a similar test, just know that when making a change like this clientside instead of serverside many things could go wrong, so make changes at your own risk.
 
 ### Adding Field
 
-![Unlocked](../assets/adminPanel/AdminPanelGlobalTestBoolean.png)
+![Unlocked](/adminPanel/AdminPanelGlobalTestBoolean.png)
 Upon submitting your request you will be greeted by a loading bar. This bar indicates in realtime how many of the entries you have made modifications to (see below). If you close this page before this finishes executing the new parameter will only be added to some of the entries. In order remedy a mistake like this please rerun the command and wait for it to finish executing.
-![Unlocked](../assets/adminPanel/AdminPanelGlobalTestBooleanLoading.png)
+![Unlocked](/adminPanel/AdminPanelGlobalTestBooleanLoading.png)
 
 ### Removing Field
 
 After it has finished executing you will see that in the current schema you will find your new field. In my specific example, I did not wish to have `globalTest` as a new parameter, so I have selected it from the available options on the dropdown and once again began the execution for removing said parameter.
-![Unlocked](../assets/adminPanel/AdminPanelGlobalTestBooleanRemoveLoading.png)
+![Unlocked](/adminPanel/AdminPanelGlobalTestBooleanRemoveLoading.png)
 
 ### Account Schema
 
 The Account schema is the second tab available on the Admin Panel. There is not anything that you can do on that tab, but you can view what parameters are currently on a given user's schema. Below is what that screen looks like.
 
-![Unlocked](../assets/adminPanel/AdminPanelLoginLocked.png)
+![Unlocked](/adminPanel/AdminPanelLoginLocked.png)
 
 You can then put in the credentials of a user to see what they look like. In this example, I just input the test user credentials of:
 - username: Test
@@ -61,4 +62,4 @@ You can then put in the credentials of a user to see what they look like. In thi
 
 _If you are curious to see what your own credentials look like go ahead and login to this field and see how yours compare to the Test user's schema_
 
-![Unlocked](../assets/adminPanel/AdminPanelLoginUnlocked.png)
+![Unlocked](/adminPanel/AdminPanelLoginUnlocked.png)
