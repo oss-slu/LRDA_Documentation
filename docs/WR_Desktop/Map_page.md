@@ -1,7 +1,7 @@
 ---
 slug: maps-page
 title: Maps Page
-authors: [Stuart Ray]
+authors: [Stuartwastaken]
 tags: [maps, documentation, user interaction]
 ---
 
@@ -78,3 +78,4 @@ useEffect(() => {
   };
   fetchLastLocation();
 }, []);
+```
