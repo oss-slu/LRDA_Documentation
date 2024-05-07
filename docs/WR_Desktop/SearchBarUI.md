@@ -53,3 +53,4 @@ class SearchBarUI extends React.Component<SearchBarUIProps> {
     );
   }
 }
+```

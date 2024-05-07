@@ -51,3 +51,4 @@ const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         y: e.clientY - rect.top - rect.height / 200,
     });
 };
+```

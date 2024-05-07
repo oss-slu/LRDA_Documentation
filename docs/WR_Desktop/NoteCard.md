@@ -74,3 +74,4 @@ const NoteCard: React.FC<NoteCardProps> = ({ note }) => {
     </div>
   );
 };
+```

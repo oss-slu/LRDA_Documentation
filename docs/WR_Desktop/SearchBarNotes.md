@@ -59,3 +59,4 @@ class SearchBarNotes extends React.Component<SearchBarNotesProps, SearchBarNotes
     );
   }
 }
+```
