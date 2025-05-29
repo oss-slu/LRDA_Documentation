@@ -30,13 +30,13 @@ Upon visiting the Welcome Page, you'll notice the title text "Where's Religion?"
 
 ### Initial State
 
-![Initial State](../assets/welcomePage/WelcomePageInitial.png)
+![Initial State](./assets/welcomePage/WelcomePageInitial.png)
 
 ### Cursor Interaction
 
 When the cursor moves over the text, the visual effects activate, creating a vibrant color shift.
 
-![Cursor Interaction](../assets/welcomePage/WelcomePageInteractive.png)
+![Cursor Interaction](./assets/welcomePage/WelcomePageInteractive.png)
 
 ## Code Insights
 

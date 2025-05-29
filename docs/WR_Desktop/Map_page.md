@@ -42,19 +42,19 @@ Access the Maps Page by navigating to `/maps` in the application. Upon entry, th
 
 ### Initial Load
 
-![Map Initial Load](../assets/mapsPage/MapInitialLoad.png)
+![Map Initial Load](../../blog/assets/mapsPage/MapInitialLoad.png)
 
 ### Note Interaction
 
 When a user interacts with a note marker, it expands to show more details.
 
-![Note Interaction](../assets/mapsPage/NoteInteraction.png)
+![Note Interaction](../../blog/assets/mapsPage/NoteInteraction.png)
 
 ### Search Functionality
 
 Demonstrates the search bar in action as a user types in a query.
 
-![Search Functionality](../assets/mapsPage/SearchFunctionality.png)
+![Search Functionality](../../blog/assets/mapsPage/SearchFunctionality.png)
 
 ## Technical Insights
 
