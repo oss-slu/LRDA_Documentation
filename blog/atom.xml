@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id> https://oss-slu.github.io/LRDA_Documentation/blog</id>
+    <title>My Site Blog</title>
+    <updated>2025-05-29T18:44:50.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href=" https://oss-slu.github.io/LRDA_Documentation/blog"/>
+    <subtitle>My Site Blog</subtitle>
+    <icon> https://oss-slu.github.io/LRDA_Documentation/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Admin Panel]]></title>
+        <id> https://oss-slu.github.io/LRDA_Documentation/blog/Admin-Panel</id>
+        <link href=" https://oss-slu.github.io/LRDA_Documentation/blog/Admin-Panel"/>
+        <updated>2025-05-29T18:44:50.000Z</updated>
+        <summary type="html"><![CDATA[This is the documentation for the Admin Panel for the lived religion desktop.]]></summary>
+        <content type="html"><![CDATA[<p>This is the documentation for the Admin Panel for the lived religion desktop.</p>
+<p>The Admin panel was initially developed in order to make changes to the backend on using the frontend. Note any of the changes made here will be reflected on the production database and cannot be reverted.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="know-before-you-go">Know Before You Go<a href="https://oss-slu.github.io/LRDA_Documentation/blog/Admin-Panel#know-before-you-go" class="hash-link" aria-label="Direct link to Know Before You Go" title="Direct link to Know Before You Go">​</a></h2>
+<ol>
+<li>Please for the love of all things good do not change anything without approval from the admins on this project. As mentioned above. Changes made on this page will reflect on every single entry within the production database.</li>
+<li>Because every change made on this page is reflected on the production database build out the supporting code on mobile and desktop <strong>*before</strong> making changes to the entries</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-main-functions">The Main Functions<a href="https://oss-slu.github.io/LRDA_Documentation/blog/Admin-Panel#the-main-functions" class="hash-link" aria-label="Direct link to The Main Functions" title="Direct link to The Main Functions">​</a></h2>
+<ul>
+<li>This page has three main functions<!-- -->
+<ol>
+<li><strong>Add parameter to every entry:</strong> This will like mentioned above <strong>permanently</strong> <em>add</em> the selected attribute from <strong>every</strong> entry in the production database.</li>
+<li><strong>Remove parameter from every entry:</strong> This will like mentioned above <strong>permanently</strong> <em>remove</em> the selected attribute from <strong>every</strong> entry in the production database.</li>
+<li><strong>View the schema of the user:</strong> This was built out in order to view the different roles that may be on a given user in the future, but at this time there are no ways to actually make changes to the user class. This is simply for viewing, but is useful nonetheless.</li>
+</ol>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="access">Access<a href="https://oss-slu.github.io/LRDA_Documentation/blog/Admin-Panel#access" class="hash-link" aria-label="Direct link to Access" title="Direct link to Access">​</a></h2>
+<p>Now that you have read everything above. You are ready to use this feature. The panel can be found by adding the following to the searchbar:
+<code>/lib/pages/adminPanel</code>
+Upon doing so you will be greeted with the following graphic.
+<img decoding="async" loading="lazy" alt="Locked" src="https://oss-slu.github.io/LRDA_Documentation/assets/images/AdminPanelLocked-ac4b2a6234acc1a67696324e3e4ec3ab.png" width="2272" height="1064" class="img_ev3q">
+If running off of localhost you can customize the password according to your liking by going into your <code>.env.local</code> and adding the following line
+<code>NEXT_PUBLIC_ADMIN_PASKEY=passwordHere</code>
+customizing passwordHere to your liking. The password used in the public build can be accessed through the project admin.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="entry-schema-modification">Entry Schema Modification<a href="https://oss-slu.github.io/LRDA_Documentation/blog/Admin-Panel#entry-schema-modification" class="hash-link" aria-label="Direct link to Entry Schema Modification" title="Direct link to Entry Schema Modification">​</a></h2>
+<p>Once you have configured your password and entered it in you will be greeted with the following screen:
+<img decoding="async" loading="lazy" alt="Unlocked" src="https://oss-slu.github.io/LRDA_Documentation/assets/images/AdminPanelUnlocked-81df7c8ce1bf9e802b17d698f982c21c.png" width="1604" height="1374" class="img_ev3q">
+Now that we are in let's get into the <strong>first</strong> main function!
+Below you can see that I am choosing to add the variable <code>globalTest</code> with the type parameter set to <code>boolean</code>. You are welcome to run a similar test, just know that when making a change like this clientside instead of serverside many things could go wrong, so make changes at your own risk.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="adding-field">Adding Field<a href="https://oss-slu.github.io/LRDA_Documentation/blog/Admin-Panel#adding-field" class="hash-link" aria-label="Direct link to Adding Field" title="Direct link to Adding Field">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Unlocked" src="https://oss-slu.github.io/LRDA_Documentation/assets/images/AdminPanelGlobalTestBoolean-60eea9883ffc58c0a8e1b477331bb9f4.png" width="1646" height="1372" class="img_ev3q">
+Upon submitting your request you will be greeted by a loading bar. This bar indicates in realtime how many of the entries you have made modifications to (see below). If you close this page before this finishes executing the new parameter will only be added to some of the entries. In order remedy a mistake like this please rerun the command and wait for it to finish executing.
+<img decoding="async" loading="lazy" alt="Unlocked" src="https://oss-slu.github.io/LRDA_Documentation/assets/images/AdminPanelGlobalTestBooleanLoading-64eb33d923ac563fca8a848d72f19e9d.png" width="1646" height="1386" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="removing-field">Removing Field<a href="https://oss-slu.github.io/LRDA_Documentation/blog/Admin-Panel#removing-field" class="hash-link" aria-label="Direct link to Removing Field" title="Direct link to Removing Field">​</a></h3>
+<p>After it has finished executing you will see that in the current schema you will find your new field. In my specific example, I did not wish to have <code>globalTest</code> as a new parameter, so I have selected it from the available options on the dropdown and once again began the execution for removing said parameter.
+<img decoding="async" loading="lazy" alt="Unlocked" src="https://oss-slu.github.io/LRDA_Documentation/assets/images/AdminPanelGlobalTestBooleanRemoveLoading-81d1867d129044ae7a5d465486faaf8f.png" width="1646" height="1484" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="account-schema">Account Schema<a href="https://oss-slu.github.io/LRDA_Documentation/blog/Admin-Panel#account-schema" class="hash-link" aria-label="Direct link to Account Schema" title="Direct link to Account Schema">​</a></h3>
+<p>The Account schema is the second tab available on the Admin Panel. There is not anything that you can do on that tab, but you can view what parameters are currently on a given user's schema. Below is what that screen looks like.</p>
+<p><img decoding="async" loading="lazy" alt="Unlocked" src="https://oss-slu.github.io/LRDA_Documentation/assets/images/AdminPanelLoginLocked-e5b180418541748998f2d3fc5e1f2bd6.png" width="1646" height="818" class="img_ev3q"></p>
+<p>You can then put in the credentials of a user to see what they look like. In this example, I just input the test user credentials of:</p>
+<ul>
+<li>username: Test</li>
+<li>password: test</li>
+</ul>
+<p><em>If you are curious to see what your own credentials look like go ahead and login to this field and see how yours compare to the Test user's schema</em></p>
+<p><img decoding="async" loading="lazy" alt="Unlocked" src="https://oss-slu.github.io/LRDA_Documentation/assets/images/AdminPanelLoginUnlocked-3ea841213f05418aa23e5e897c74a225.png" width="1646" height="818" class="img_ev3q"></p>]]></content>
+        <author>
+            <name>Izak Robles</name>
+            <uri>https://github.com/izakrobles</uri>
+        </author>
+        <category label="admin" term="admin"/>
+        <category label="documentation" term="documentation"/>
+        <category label="schema" term="schema"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Login Screen]]></title>
+        <id> https://oss-slu.github.io/LRDA_Documentation/blog/Login-Screen</id>
+        <link href=" https://oss-slu.github.io/LRDA_Documentation/blog/Login-Screen"/>
+        <updated>2025-05-29T18:44:50.000Z</updated>
+        <summary type="html"><![CDATA[This is the documentation for the login screen for the lived religion desktop.]]></summary>
+        <content type="html"><![CDATA[<p>This is the documentation for the login screen for the lived religion desktop.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="properties-of-login-feature">Properties of Login Feature<a href="https://oss-slu.github.io/LRDA_Documentation/blog/Login-Screen#properties-of-login-feature" class="hash-link" aria-label="Direct link to Properties of Login Feature" title="Direct link to Properties of Login Feature">​</a></h2>
+<ul>
+<li>The login feature is simply a layering of shadc/ui componenets.</li>
+<li>Login screen can be accessed through the NavBar along the top by selecting the login button on the top right. Or, by typing in address/lib/pages/loginPage</li>
+<li>Authentication made through a POST Request to the lived-religion-dev.rerum.io</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Unlocked" src="https://oss-slu.github.io/LRDA_Documentation/assets/images/loginUI-a3cbb61e700397ae3abfdd1acdd876bf.png" width="3024" height="1466" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="user-class">User Class<a href="https://oss-slu.github.io/LRDA_Documentation/blog/Login-Screen#user-class" class="hash-link" aria-label="Direct link to User Class" title="Direct link to User Class">​</a></h2>
+<p>The user class can be seen below, but for more implementation details. See the user_class.ts file located in the project directory <code>@/lib/model/user_class.ts</code>
+<img decoding="async" loading="lazy" alt="Unlocked" src="https://oss-slu.github.io/LRDA_Documentation/assets/images/userClass-f6efab3b49be10987ec37d7f08a35d9b.png" width="1042" height="1284" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="login-function">Login Function<a href="https://oss-slu.github.io/LRDA_Documentation/blog/Login-Screen#login-function" class="hash-link" aria-label="Direct link to Login Function" title="Direct link to Login Function">​</a></h3>
+<p>Below is the login function as a member of the <code>User</code> class.
+<img decoding="async" loading="lazy" alt="Unlocked" src="https://oss-slu.github.io/LRDA_Documentation/assets/images/loginFunction-d460e9f84ae3f0fadec477e0606df69d.png" width="1042" height="940" class="img_ev3q">
+The username and password are passed into the where they are parsed as the body contents of the POST request to the Rerum database. Where the user's request is either authenticated or rejected made known by the return body of the request. If a response 200 is returned the user is authenticated as the sole member of the user class and all functions are available throughout the site :)</p>]]></content>
+        <author>
+            <name>Izak Robles</name>
+            <uri>https://github.com/izakrobles</uri>
+        </author>
+        <category label="login" term="login"/>
+        <category label="documentation" term="documentation"/>
+        <category label="user" term="user"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Welcome Page]]></title>
+        <id> https://oss-slu.github.io/LRDA_Documentation/blog/welcome-page</id>
+        <link href=" https://oss-slu.github.io/LRDA_Documentation/blog/welcome-page"/>
+        <updated>2025-05-29T18:44:50.000Z</updated>
+        <summary type="html"><![CDATA[This is the documentation for the Welcome Page of the Lived Religion project.]]></summary>
+        <content type="html"><![CDATA[<p>This is the documentation for the Welcome Page of the Lived Religion project.</p>
+<p>The Welcome Page was designed to create an engaging visual experience that reacts to the user's mouse movements. The interactive elements provide a dynamic and visually appealing introduction to the site.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="important-notes-before-you-proceed">Important Notes Before You Proceed<a href="https://oss-slu.github.io/LRDA_Documentation/blog/welcome-page#important-notes-before-you-proceed" class="hash-link" aria-label="Direct link to Important Notes Before You Proceed" title="Direct link to Important Notes Before You Proceed">​</a></h2>
+<ol>
+<li><strong>Dynamic Interaction</strong>: The page features a title "Where's Religion?" that changes visually in response to cursor movements. This effect adds a layer of interactivity that makes the initial engagement with the site more intriguing.</li>
+<li><strong>Sensitive Effects</strong>: Changes to the visual effect parameters directly influence how users perceive the site on their first visit. It's crucial to test any adjustments thoroughly to maintain a positive user experience.</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="main-features">Main Features<a href="https://oss-slu.github.io/LRDA_Documentation/blog/welcome-page#main-features" class="hash-link" aria-label="Direct link to Main Features" title="Direct link to Main Features">​</a></h2>
+<ul>
+<li><strong>Mouse Movement Detection</strong>: Detects and responds to the cursor's position, providing a personalized interactive experience.<!-- -->
+<ol>
+<li><strong>Interactive Text Effects</strong>: The main title "Where's Religion?" uses gradients and masking to create a visual effect that changes based on cursor location.</li>
+<li><strong>Cursor Customization</strong>: Incorporates a custom cursor for a unique visual style and improved user interaction.</li>
+</ol>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="accessing-the-welcome-page">Accessing the Welcome Page<a href="https://oss-slu.github.io/LRDA_Documentation/blog/welcome-page#accessing-the-welcome-page" class="hash-link" aria-label="Direct link to Accessing the Welcome Page" title="Direct link to Accessing the Welcome Page">​</a></h2>
+<p>Navigate to the root URL of the site, and you will be directed to the Welcome Page. Here, you will see the interactive title and have the opportunity to explore the initial offerings of the site.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="visual-interaction">Visual Interaction<a href="https://oss-slu.github.io/LRDA_Documentation/blog/welcome-page#visual-interaction" class="hash-link" aria-label="Direct link to Visual Interaction" title="Direct link to Visual Interaction">​</a></h2>
+<p>Upon visiting the Welcome Page, you'll notice the title text "Where's Religion?" responds dynamically to mouse movements. Below are screenshots depicting different states of interaction:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="initial-state">Initial State<a href="https://oss-slu.github.io/LRDA_Documentation/blog/welcome-page#initial-state" class="hash-link" aria-label="Direct link to Initial State" title="Direct link to Initial State">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Initial State" src="https://oss-slu.github.io/LRDA_Documentation/assets/images/WelcomePageInitial-ad8821432ed3d10e3b467c62a5fd224e.png" width="2880" height="1514" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cursor-interaction">Cursor Interaction<a href="https://oss-slu.github.io/LRDA_Documentation/blog/welcome-page#cursor-interaction" class="hash-link" aria-label="Direct link to Cursor Interaction" title="Direct link to Cursor Interaction">​</a></h3>
+<p>When the cursor moves over the text, the visual effects activate, creating a vibrant color shift.</p>
+<p><img decoding="async" loading="lazy" alt="Cursor Interaction" src="https://oss-slu.github.io/LRDA_Documentation/assets/images/WelcomePageInteractive-c64ff43e7234041473e6b364b8beda4f.png" width="2332" height="824" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="code-insights">Code Insights<a href="https://oss-slu.github.io/LRDA_Documentation/blog/welcome-page#code-insights" class="hash-link" aria-label="Direct link to Code Insights" title="Direct link to Code Insights">​</a></h2>
+<p>This section would provide insights into the React code structure, especially the use of <code>useState</code> and <code>useRef</code> for managing cursor positions and DOM references.</p>
+<div class="language-jsx codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-jsx codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic">// Simplified code snippet highlighting key parts</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">const</span><span class="token plain"> handleMouseMove </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">e</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token maybe-class-name">React</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access maybe-class-name">MouseEvent</span><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag class-name" style="color:#00009f">HTMLDivElement</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain-text">) =&gt; </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">const</span><span class="token plain"> rect </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> textRef</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access">current</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">getBoundingClientRect</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token function" style="color:#d73a49">setCursorPos</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token literal-property property" style="color:#36acaa">x</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> e</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access">clientX</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">-</span><span class="token plain"> rect</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access">left</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">-</span><span class="token plain"> rect</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access">width</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">/</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">200</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token literal-property property" style="color:#36acaa">y</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> e</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access">clientY</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">-</span><span class="token plain"> rect</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access">top</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">-</span><span class="token plain"> rect</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access">height</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">/</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">200</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain-text">;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content>
+        <author>
+            <name>Stuart Wastaken</name>
+            <uri>https://github.com/Stuartwastaken</uri>
+        </author>
+        <category label="welcome" term="welcome"/>
+        <category label="documentation" term="documentation"/>
+        <category label="interactivity" term="interactivity"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Where's Religion Desktop/Navbar/Navbar]]></title>
+        <id> https://oss-slu.github.io/LRDA_Documentation/blog/Where's Religion Desktop/Navbar/Navbar</id>
+        <link href=" https://oss-slu.github.io/LRDA_Documentation/blog/Where's Religion Desktop/Navbar/Navbar"/>
+        <updated>2025-05-29T18:44:50.000Z</updated>
+        <summary type="html"><![CDATA[Starting Navbar documentation]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="starting-navbar-documentation">Starting Navbar documentation<a href="https://oss-slu.github.io/LRDA_Documentation/blog/Where's%20Religion%20Desktop/Navbar/Navbar#starting-navbar-documentation" class="hash-link" aria-label="Direct link to Starting Navbar documentation" title="Direct link to Starting Navbar documentation">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="documentation-for-the-navbar-component">Documentation for the <code>Navbar</code> Component<a href="https://oss-slu.github.io/LRDA_Documentation/blog/Where's%20Religion%20Desktop/Navbar/Navbar#documentation-for-the-navbar-component" class="hash-link" aria-label="Direct link to documentation-for-the-navbar-component" title="Direct link to documentation-for-the-navbar-component">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="overview">Overview<a href="https://oss-slu.github.io/LRDA_Documentation/blog/Where's%20Religion%20Desktop/Navbar/Navbar#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview">​</a></h3>
+<p>The <code>Navbar</code> component serves as the navigation bar for a web application, providing links for navigation and user authentication actions. It uses React hooks for state management and interacts with the user model for authentication processes.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="dependencies">Dependencies<a href="https://oss-slu.github.io/LRDA_Documentation/blog/Where's%20Religion%20Desktop/Navbar/Navbar#dependencies" class="hash-link" aria-label="Direct link to Dependencies" title="Direct link to Dependencies">​</a></h3>
+<ul>
+<li><strong>React:</strong> Utilizes React hooks such as <code>useState</code> and <code>useEffect</code>.</li>
+<li><strong>Next.js:</strong> Uses the <code>Link</code> component from Next.js for routing.</li>
+<li><strong>User Class:</strong> Interacts with the <code>User</code> class from <code>../models/user_class</code> to manage user authentication.</li>
+<li><strong>Button:</strong> Custom button component from <code>@/components/ui/button</code> for actionable items like login and logout.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="state-management">State Management<a href="https://oss-slu.github.io/LRDA_Documentation/blog/Where's%20Religion%20Desktop/Navbar/Navbar#state-management" class="hash-link" aria-label="Direct link to State Management" title="Direct link to State Management">​</a></h3>
+<ul>
+<li><code>name</code>: A state to store the username, initialized as <code>null</code> and updated based on user information.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="effect-hooks">Effect Hooks<a href="https://oss-slu.github.io/LRDA_Documentation/blog/Where's%20Religion%20Desktop/Navbar/Navbar#effect-hooks" class="hash-link" aria-label="Direct link to Effect Hooks" title="Direct link to Effect Hooks">​</a></h3>
+<ul>
+<li>
+<p><strong>User Authentication Initialization:</strong></p>
+<ul>
+<li>On component mount, the effect hook fetches the user's name from the user model and attempts automatic login using stored credentials in <code>localStorage</code>. It also sets the username in the state if fetched successfully.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="event-handlers">Event Handlers<a href="https://oss-slu.github.io/LRDA_Documentation/blog/Where's%20Religion%20Desktop/Navbar/Navbar#event-handlers" class="hash-link" aria-label="Direct link to Event Handlers" title="Direct link to Event Handlers">​</a></h3>
+</li>
+<li>
+<p><strong><code>handleLogout</code> Function</strong>:</p>
+<ul>
+<li><strong>Purpose</strong>: Handles user logout actions.</li>
+<li><strong>Process</strong>:<!-- -->
+<ul>
+<li>Attempts to log out using the <code>User</code> class method.</li>
+<li>Clears user-specific data from <code>localStorage</code>.</li>
+<li>Redirects to the homepage using <code>window.location.href</code>.</li>
+</ul>
+</li>
+<li><strong>Error Handling</strong>: Logs errors to the console if the logout process fails.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>startTour</code> Function</strong>:</p>
+<ul>
+<li><strong>Trigger</strong>: Activated by a button click, this function determines the current page and launches an appropriate guided tour.</li>
+<li><strong>Details</strong>:<!-- -->
+<ul>
+<li>Checks the current route and starts a tour tailored to the page features.</li>
+<li>Utilizes <code>intro.js</code> for managing interactive steps and tour flow.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="core-functionalities-and-interactions">Core Functionalities and Interactions<a href="https://oss-slu.github.io/LRDA_Documentation/blog/Where's%20Religion%20Desktop/Navbar/Navbar#core-functionalities-and-interactions" class="hash-link" aria-label="Direct link to Core Functionalities and Interactions" title="Direct link to Core Functionalities and Interactions">​</a></h3>
+<ul>
+<li>
+<p><strong>Login and Logout:</strong></p>
+<ul>
+<li>Provides a button to logout, which clears the user-specific data from <code>localStorage</code> and redirects to the homepage upon successful logout.</li>
+<li>Shows a login button if no user is logged in, redirecting to the login page when clicked.</li>
+</ul>
+</li>
+<li>
+<p><strong>Dynamic Link Rendering:</strong></p>
+<ul>
+<li>Conditionally renders links based on the user's authentication status:<!-- -->
+<ul>
+<li>Shows a "Create a Note" link if a user is logged in.</li>
+<li>Always shows an "Explore" link.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="interactive-tour-integration">Interactive Tour Integration<a href="https://oss-slu.github.io/LRDA_Documentation/blog/Where's%20Religion%20Desktop/Navbar/Navbar#interactive-tour-integration" class="hash-link" aria-label="Direct link to Interactive Tour Integration" title="Direct link to Interactive Tour Integration">​</a></h3>
+<ul>
+<li><strong>Purpose</strong>: Enhances user onboarding by providing guided tours of the application's interface.</li>
+<li><strong>Implementation</strong>:<!-- -->
+<ul>
+<li>Utilizes <code>intro.js</code> for creating step-by-step interactive tours.</li>
+<li>Configured to trigger tours based on user actions or page visits.</li>
+</ul>
+</li>
+<li><strong>Customization</strong>:<!-- -->
+<ul>
+<li>Developers can customize the steps, look and feel, and flow of the tour.</li>
+<li>Tours are defined per page or feature to ensure relevance.</li>
+</ul>
+</li>
+<li><strong>Usage</strong>:<!-- -->
+<ul>
+<li>Example code to start a tour:<!-- -->
+<div class="language-javascript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-javascript codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">startTour</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"> </span><span class="token comment" style="color:#999988;font-style:italic">// Initiates the tour, which can be customized per page</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+</ul>
+</li>
+<li><strong>Accessibility</strong>: Includes options to ensure the tour is accessible, including keyboard navigation and screen reader support.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="css-and-styling">CSS and Styling<a href="https://oss-slu.github.io/LRDA_Documentation/blog/Where's%20Religion%20Desktop/Navbar/Navbar#css-and-styling" class="hash-link" aria-label="Direct link to CSS and Styling" title="Direct link to CSS and Styling">​</a></h3>
+<ul>
+<li>The component is styled with Tailwind CSS to provide a responsive and modern navigation bar, using classes for background color, text color, hover effects, and layout.</li>
+</ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Welcome]]></title>
+        <id> https://oss-slu.github.io/LRDA_Documentation/blog/welcome</id>
+        <link href=" https://oss-slu.github.io/LRDA_Documentation/blog/welcome"/>
+        <updated>2021-08-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Docusaurus blogging features are powered by the blog plugin.]]></summary>
+        <content type="html"><![CDATA[<p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer">blog plugin</a>.</p>
+<p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p>
+<p>Regular blog authors can be added to <code>authors.yml</code>.</p>
+<p>The blog post date can be extracted from filenames, such as:</p>
+<ul>
+<li><code>2019-05-30-welcome.md</code></li>
+<li><code>2019-05-30-welcome/index.md</code></li>
+</ul>
+<p>A blog post folder can be convenient to co-locate blog post images:</p>
+<p><img decoding="async" loading="lazy" alt="Docusaurus Plushie" src="https://oss-slu.github.io/LRDA_Documentation/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500" class="img_ev3q"></p>
+<p>The blog supports tags as well!</p>
+<p><strong>And if you don't want a blog</strong>: just delete this directory, and use <code>blog: false</code> in your Docusaurus config.</p>]]></content>
+        <author>
+            <name>Sébastien Lorber</name>
+            <uri>https://sebastienlorber.com</uri>
+        </author>
+        <author>
+            <name>Yangshun Tay</name>
+            <uri>https://github.com/yangshun</uri>
+        </author>
+        <category label="facebook" term="facebook"/>
+        <category label="hello" term="hello"/>
+        <category label="docusaurus" term="docusaurus"/>
+    </entry>
+</feed>

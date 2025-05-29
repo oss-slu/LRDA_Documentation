@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklrda_documentation=self.webpackChunklrda_documentation||[]).push([[2181],{3063:o=>{o.exports=JSON.parse('{"permalink":"/LRDA_Documentation/blog/tags/facebook","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

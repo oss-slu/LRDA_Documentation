@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklrda_documentation=self.webpackChunklrda_documentation||[]).push([[3363],{6810:a=>{a.exports=JSON.parse('{"label":"schema","permalink":"/LRDA_Documentation/blog/tags/schema","allTagsPath":"/LRDA_Documentation/blog/tags","count":1,"unlisted":false}')}}]);
